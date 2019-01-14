@@ -1,0 +1,143 @@
+/*!
+* Start Bootstrap - Shop Homepage (https://startbootstrap.com/template-overviews/shop-homepage)
+* Copyright 2013-2017 Start Bootstrap
+* Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
+*/
+
+html {
+    height: 100%;
+    /*margin: 0;*/
+    /*padding: 0;*/
+}
+body {
+    padding-top: 70px;
+    margin: 0;
+    height: 100%;
+}
+footer {
+    /*position: absolute;*/
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+}
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+/*
+    custom (classes) styling
+*/
+.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+/*for footer*/
+.content {
+padding-bottom: 100px; /*height of the footer*/
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+}
+.help-block{
+    color: crimson;
+}
+.adminDataTableImg {
+    height: 50px;
+    width: 50px;
+}
+
+/*
+ * http://dimox.name/custom-checkboxes-and-radio-buttons-using-css-only/
+    */
+/*checkbox swipe*/
+.checkbox input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 20px;
+}
+.checkbox__text {
+    position: relative;
+    padding: 0 0 0 60px;
+    cursor: pointer;
+}
+.checkbox__text:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 50px;
+    height: 26px;
+    border-radius: 13px;
+    background: #CDD1DA;
+    box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+    transition: .2s;
+}
+.checkbox__text:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    transition: .2s;
+}
+.checkbox input:checked + .checkbox__text:before {
+    background: #9FD468;
+}
+.checkbox input:checked + .checkbox__text:after {
+    left: 26px;
+}
+.checkbox input:focus + .checkbox__text:before {
+    box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,0,.7);
+}
+
+/* overridden css */
+.help-block {
+    color: #ff0000;
+}
+
+
+/*cart CSS */
+/*https://bootsnipp.com/snippets/featured/responsive-shopping-cart*/
+.table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
+}
+@media screen and (max-width: 600px) {
+    table#cart tbody td .form-control{
+        width:20%;
+        display: inline !important;
+    }
+    .actions .btn{
+        width:36%;
+        margin:1.5em 0;
+    }
+
+    .actions .btn-info{
+        float:left;
+    }
+    .actions .btn-danger{
+        float:right;
+    }
+
+    table#cart thead { display: none; }
+    table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
+    table#cart tbody tr td:first-child { background: #333; color: #fff; }
+    table#cart tbody td:before {
+        content: attr(data-th); font-weight: bold;
+        display: inline-block; width: 8rem;
+    }
+
+
+
+    table#cart tfoot td{display:block; }
+    table#cart tfoot td .btn{display:block;}
+
+}
+
